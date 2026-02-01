@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Видеовизитки для кино — съёмка под кастинг</title>
+  <meta name="description" content="Профессиональная запись видеовизиток для кино: подготовка, съёмка, звук, свет, монтаж. Также фото и видеосъёмка." />
+  <style>
+    :root{
+      --bg:#0b0d12;
+      --card:#111522;
+      --text:#e9edf6;
+      --muted:#a7b0c2;
+      --line:rgba(255,255,255,.10);
+      --accent:#7c5cff;
+      --accent2:#22c55e;
+      --max:1120px;
+      --r:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 70% -10%, rgba(124,92,255,.35), transparent 60%),
+        radial-gradient(900px 600px at 10% 10%, rgba(34,197,94,.22), transparent 55%),
+        var(--bg);
+      line-height:1.5;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 20px}
+    header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(11,13,18,.55);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:16px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px; text-decoration:none;
+      font-weight:700; letter-spacing:.2px;
+    }
+    .logo{
+      width:34px; height:34px; border-radius:10px;
+      background: linear-gradient(135deg, rgba(124,92,255,1), rgba(34,197,94,1));
+      box-shadow: 0 10px 30px rgba(124,92,255,.25);
+    }
+    .navlinks{
+      display:flex; gap:18px; align-items:center;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .navlinks a{
+      text-decoration:none; color:var(--muted);
+      font-weight:600; font-size:14px;
+    }
+    .navlinks a:hover{color:var(--text)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 16px; border-radius:12px; border:1px solid var(--line);
+      text-decoration:none; font-weight:700;
+      background: rgba(255,255,255,.04);
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+      cursor:pointer;
+    }
+    .btn:hover{transform: translateY(-1px); border-color: rgba(255,255,255,.18)}
+    .btn.primary{
+      border-color: rgba(124,92,255,.45);
+      background: linear-gradient(135deg, rgba(124,92,255,.95), rgba(124,92,255,.55));
+      box-shadow: 0 12px 35px rgba(124,92,255,.25);
+    }
+    .btn.primary:hover{border-color: rgba(124,92,255,.75)}
+    .btn.ghost{background: transparent}
+    .hero{
+      padding:54px 0 24px;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:22px;
+      align-items:stretch;
+    }
+    .card{
+      border:1px solid var(--line);
+      background: rgba(17,21,34,.72);
+      border-radius:var(--r);
+      padding:22px;
+    }
+    h1{
+      margin:0 0 10px;
+      font-size:44px;
+      line-height:1.08;
+      letter-spacing:-.6px;
+    }
+    .lead{color:var(--muted); font-size:16px; margin:0 0 18px}
+    .badges{display:flex; gap:10px; flex-wrap:wrap; margin:18px 0 0}
+    .badge{
+      font-size:13px;
+      color:var(--muted);
+      border:1px solid var(--line);
+      padding:8px 10px;
+      border-radius:999px;
+      background: rgba(255,255,255,.03);
+    }
+    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
+    .panelTitle{font-weight:800; margin:0 0 10px}
+    .kpi{
+      display:grid; gap:10px;
+      margin-top:10px;
+    }
+    .kpiItem{
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+    }
+    .kpiItem b{display:block; font-size:16px}
+    .kpiItem span{color:var(--muted); font-size:13px}
+    section{padding:28px 0}
+    .secHead{
+      display:flex; align-items:flex-end; justify-content:space-between;
+      gap:14px; margin-bottom:14px;
+    }
+    .secHead h2{margin:0; font-size:26px; letter-spacing:-.3px}
+    .secHead p{margin:0; color:var(--muted); max-width:60ch}
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+    }
+    .grid2{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap:14px;
+    }
+    .item h3{margin:0 0 6px; font-size:16px}
+    .item p{margin:0; color:var(--muted); font-size:14px}
+    .steps{
+      counter-reset: step;
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap:14px;
+    }
+    .step{
+      position:relative;
+      padding:18px;
+      border-radius:var(--r);
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      min-height:124px;
+    }
+    .step:before{
+      counter-increment: step;
+      content: counter(step);
+      position:absolute; top:14px; right:14px;
+      width:28px; height:28px; border-radius:10px;
+      display:flex; align-items:center; justify-content:center;
+      border:1px solid rgba(255,255,255,.14);
+      color:var(--muted); font-weight:800; font-size:13px;
+      background: rgba(0,0,0,.12);
+    }
+    .divider{
+      height:1px; background: var(--line);
+      margin:16px 0 0;
+    }
+    .contact{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    form{
+      display:grid;
+      gap:10px;
+      margin-top:10px;
+    }
+    input, textarea{
+      width:100%;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color:var(--text);
+      padding:12px 12px;
+      font: inherit;
+      outline:none;
+    }
+    textarea{min-height:110px; resize:vertical}
+    input:focus, textarea:focus{border-color: rgba(124,92,255,.65)}
+    .hint{color:var(--muted); font-size:13px; margin:10px 0 0}
+    footer{
+      padding:22px 0 34px;
+      color:var(--muted);
+      font-size:13px;
+    }
+    @media (max-width: 960px){
+      h1{font-size:36px}
+      .heroGrid{grid-template-columns:1fr}
+      .grid3{grid-template-columns:1fr}
+      .grid2{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr 1fr}
+      .contact{grid-template-columns:1fr}
+    }
+    @media (max-width: 520px){
+      h1{font-size:32px}
+      .steps{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top">
+        <span class="logo" aria-hidden="true"></span>
+        <span>Видеовизитки для кино</span>
+      </a>
+      <nav class="navlinks" aria-label="Навигация">
+        <a href="#about">О компании</a>
+        <a href="#cinema">Кино</a>
+        <a href="#team">Команда</a>
+        <a href="#process">Как проходит</a>
+        <a href="#services">Услуги</a>
+        <a class="btn primary" href="#contacts">Записаться</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap heroGrid">
+        <div class="card">
+          <h1>Профессиональные <span style="color:var(--accent)">видеовизитки</span> для кино — с режиссёрским подходом</h1>
+          <p class="lead">
+            Запишем видеовизитку, которая выглядит и звучит как кино: грамотная подача, свет, чистый звук и монтаж.
+            Главная цель — чтобы кастинг увидел тебя “в кадре” сразу.
+          </p>
+          <div class="ctaRow">
+            <a class="btn primary" href="#contacts">Оставить заявку</a>
+            <a class="btn ghost" href="#portfolio" onclick="scrollToSection(event,'portfolio')">Посмотреть примеры</a>
+          </div>
+
+          <div class="badges" aria-label="Преимущества">
+            <span class="badge">Свет • звук • камера</span>
+            <span class="badge">Комфортная атмосфера на площадке</span>
+            <span class="badge">Помогаем с текстом и подачей</span>
+            <span class="badge">Монтаж и экспорт под требования кастингов</span>
+          </div>
+        </div>
+
+        <aside class="card">
+          <p class="panelTitle">Коротко о результате</p>
+          <div class="kpi">
+            <div class="kpiItem">
+              <b>Киношная картинка</b>
+              <span>Световая схема под лицо и фактуру</span>
+            </div>
+            <div class="kpiItem">
+              <b>Чистый звук</b>
+              <span>Петличка/бум, контроль уровня, шумоподавление</span>
+            </div>
+            <div class="kpiItem">
+              <b>Подача, которая работает</b>
+              <span>Режиссёр/оператор подскажут темп, акценты, эмоцию</span>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <p class="hint">Поставь сюда: логотип, фото студии/кадры с бэкстейджа или короткий showreel.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="wrap">
+        <div class="secHead">
+          <h2>Мы — команда, которая делает видеовизитки “как надо”</h2>
+          <p>Мы специализируемся на видеовизитках для актёров и всех, кто проходит кастинги. Это наша основная услуга — и мы выстроили процесс под киноиндустрию.</p>
+        </div>
+
+        <div class="grid3">
+          <div class="card item">
+            <h3>Фокус на кастингах</h3>
+            <p>Знаем, что важно: читаемость, естественность, качество кадра и звука, чёткая структура и подача.</p>
+          </div>
+          <div class="card item">
+            <h3>Киношный продакшн</h3>
+            <p>Работаем с профессиональным светом, оптикой, звуком и монтажом — чтобы выглядело уверенно на любом экране.</p>
+          </div>
+          <div class="card item">
+            <h3>Без стресса</h3>
+            <p>Спокойная атмосфера на площадке и поддержка в кадре: помогаем раскрыться и не “зажаться”.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CINEMA -->
+    <section id="cinema">
+      <div class="wrap">
+        <div class="secHead">
+          <h2>Кино сегодня — это скорость и качество</h2>
+          <p>На кастингах часто решают секунды. Видеовизитка — это твоё первое впечатление ещё до пробы.</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card item">
+            <h3>Видеовизитка стала стандартом</h3>
+            <p>Кастинг-директоры получают много заявок и смотрят быстро. Сильная видеовизитка помогает выделиться и показать органику в кадре.</p>
+          </div>
+          <div class="card item">
+            <h3>Качество = доверие</h3>
+            <p>Свет, звук и кадр напрямую влияют на восприятие профессионализма. Наша задача — сделать так, чтобы тебя было приятно смотреть и слушать.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team">
+      <div class="wrap">
+        <div class="secHead">
+          <h2>Профессиональная команда и оборудование</h2>
+          <p>Работаем как маленькая кино-группа: оператор/видеограф, свет, звук, режиссёрское сопровождение и монтаж.</p>
+        </div>
+
+        <div class="grid3">
+          <div class="card item">
+            <h3>Специалисты на площадке</h3>
+            <p>Подскажем, как стоять, куда смотреть, где сделать паузу — чтобы материал получился живым и уверенным.</p>
+          </div>
+          <div class="card item">
+            <h3>Проф. техника</h3>
+            <p>Камера, оптика, свет, микрофоны — всё нацелено на чистую картинку и разборчивую речь.</p>
+          </div>
+          <div class="card item">
+            <h3>Комфортная атмосфера</h3>
+            <p>Делаем съёмку спокойной и дружелюбной. В результате ты звучишь и выглядишь естественно.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process">
+      <div class="wrap">
+        <div class="secHead">
+          <h2>Как проходит запись видеовизитки</h2>
+          <p>Процесс понятный: готовимся, снимаем, монтируем и отдаём финал в удобных форматах.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <h3 style="margin:0 0 6px">Подготовка</h3>
+            <p style="margin:0; color:var(--muted); font-size:14px">Уточняем задачу, формат, длину, требования кастингов. Помогаем со структурой и текстом.</p>
+          </div>
+          <div class="step">
+            <h3 style="margin:0 0 6px">Съёмка</h3>
+            <p style="margin:0; color:var(--muted); font-size:14px">Настраиваем свет и звук, делаем несколько дублей, подсказываем подачу и темп.</p>
+          </div>
+          <div class="step">
+            <h3 style="margin:0 0 6px">Монтаж</h3>
+            <p style="margin:0; color:var(--muted); font-size:14px">Собираем лучший дубль, чистим звук, аккуратно работаем с цветом и динамикой.</p>
+          </div>
+          <div class="step">
+            <h3 style="margin:0 0 6px">Готовые версии</h3>
+            <p style="margin:0; color:var(--muted); font-size:14px">Отдаём файлы под разные площадки/формы: горизонт/вертикаль, разные веса и разрешения.</p>
+          </div>
+        </div>
+
+        <div id="portfolio" class="card" style="margin-top:14px">
+          <h3 style="margin:0 0 6px">Примеры работ</h3>
+          <p style="margin:0; color:var(--muted); font-size:14px">
+            Вставь сюда ссылки на YouTube/Vimeo/Drive или превью-кадры.  
+            Можно сделать сетку с 3–6 роликами (если пришлёшь ссылки — вставлю красиво).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="wrap">
+        <div class="secHead">
+          <h2>Дополнительные услуги</h2>
+          <p>Если нужно закрыть “пакетом”, помимо видеовизитки можем сделать фото и видеоконтент.</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card item">
+            <h3>Видеосъёмка</h3>
+            <p>Рилсы, портретные видео, интервью, промо. Подберём стиль и подачу под задачу и площадку.</p>
+          </div>
+          <div class="card item">
+            <h3>Фотосъёмка</h3>
+            <p>Портреты/хедшоты, бэкстейдж, контент для соцсетей. Чисто, аккуратно, с правильным светом.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTS -->
+    <section id="contacts">
+      <div class="wrap">
+        <div class="secHead">
+          <h2>Контакты</h2>
+          <p>Напиши — подскажем формат и предложим удобное время для съёмки.</p>
+        </div>
+
+        <div class="contact">
+          <div class="card">
+            <h3 style="margin:0 0 10px">Связаться</h3>
+            <p style="margin:0; color:var(--muted); font-size:14px">
+              Телефон: <b>+7 (___) ___-__-__</b><br />
+              Telegram: <b>@username</b><br />
+              WhatsApp: <b>+7 (___) ___-__-__</b><br />
+              Email: <b>name@example.com</b><br />
+              Город: <b>________</b>
+            </p>
+            <p class="hint">Замени контакты на свои. Можно добавить адрес студии и часы работы.</p>
+          </div>
+
+          <div class="card">
+            <h3 style="margin:0 0 6px">Заявка</h3>
+            <p style="margin:0; color:var(--muted); font-size:14px">Оставь контакт — мы ответим и обсудим задачу.</p>
+
+            <!-- Простая форма: отправляет в Telegram через ссылку (скрипт ниже),
+                 либо можно заменить на свой обработчик/CRM -->
+            <form id="leadForm">
+              <input name="name" placeholder="Имя" required />
+              <input name="contact" placeholder="Телефон / Telegram" required />
+              <textarea name="msg" placeholder="Коротко: для чего видеовизитка, сроки, пожелания"></textarea>
+              <button class="btn primary" type="submit">Отправить</button>
+            </form>
+
+            <p class="hint">
+              Сейчас форма открывает подготовленное сообщение в Telegram (можешь поменять на WhatsApp/почту или подключить обработчик).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        © <span id="y"></span> Видеовизитки для кино. Все права защищены.
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    function scrollToSection(e, id){
+      e.preventDefault();
+      document.getElementById(id)?.scrollIntoView({behavior:'smooth', block:'start'});
+    }
+
+    // Форма: генерируем сообщение и открываем Telegram link (поменяй username ниже)
+    const TG_USERNAME = "username"; // <-- сюда @username без @
+    document.getElementById('leadForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      const name = (fd.get('name') || '').toString().trim();
+      const contact = (fd.get('contact') || '').toString().trim();
+      const msg = (fd.get('msg') || '').toString().trim();
+
+      const text =
+        `Заявка на видеовизитку для кино%0A` +
+        `Имя: ${encodeURIComponent(name)}%0A` +
+        `Контакт: ${encodeURIComponent(contact)}%0A` +
+        `Комментарий: ${encodeURIComponent(msg || '—')}`;
+
+      const url = `https://t.me/${TG_USERNAME}?text=${text}`;
+      window.open(url, "_blank");
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>

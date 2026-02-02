@@ -1,0 +1,71 @@
+{
+  "brand": {
+    "name": "YOUR STUDIO"
+  },
+  "hero": {
+    "image": "./assets/photos/hero.jpg",
+    "chip": "VIDEOVISITKA / CINEMA",
+    "title": "Видеовизитки для кино",
+    "sub": "Минимум слов. Максимум кадра.",
+    "cta1": "Записаться",
+    "cta2": "Смотреть работы"
+  },
+  "marquee": [
+    "свет",
+    "звук",
+    "камера",
+    "монтаж",
+    "режиссёр рядом",
+    "комфортная съёмка",
+    "под кастинг",
+    "быстро"
+  ],
+  "work": {
+    "note": "клик — откроет ссылку/файл",
+    "items": [
+      { "src": "./assets/photos/work1.jpg", "title": "визитка", "tag": "cinema", "link": "https://example.com" },
+      { "src": "./assets/photos/work2.jpg", "title": "визитка", "tag": "voice", "link": "https://example.com" },
+      { "src": "./assets/photos/work3.jpg", "title": "бэкстейдж", "tag": "set", "link": "https://example.com" },
+      { "src": "./assets/photos/work4.jpg", "title": "кадр", "tag": "light", "link": "https://example.com" },
+      { "src": "./assets/photos/work5.jpg", "title": "кадр", "tag": "sound", "link": "https://example.com" },
+      { "src": "./assets/photos/work6.jpg", "title": "визитка", "tag": "actor", "link": "https://example.com" }
+    ]
+  },
+  "cinema": {
+    "title": "Кино сейчас",
+    "text": "Кастинги смотрят быстро. Видеовизитка должна звучать и выглядеть уверенно."
+  },
+  "steps": [
+    { "title": "подготовка", "text": "структура, подача" },
+    { "title": "съёмка", "text": "свет + звук + дубль" },
+    { "title": "монтаж", "text": "чистка, цвет" },
+    { "title": "выдача", "text": "версии под площадки" }
+  ],
+  "services": [
+    { "title": "Видеовизитка (основное)", "sub": "под кино/кастинги", "image": "./assets/photos/service1.jpg" },
+    { "title": "Видеосъёмка", "sub": "интервью / промо", "image": "./assets/photos/service2.jpg" },
+    { "title": "Фотосъёмка", "sub": "портрет / контент", "image": "./assets/photos/service3.jpg" }
+  ],
+  "team": {
+    "title": "Команда и атмосфера",
+    "photo": "./assets/photos/team.jpg",
+    "bullets": [
+      "Проф. оборудование и специалисты",
+      "Спокойная площадка без стресса",
+      "Режиссёрская поддержка в кадре"
+    ]
+  },
+  "contacts": {
+    "note": "Напиши — ответим быстро.",
+    "items": [
+      { "label": "Telegram", "value": "@username", "href": "https://t.me/username" },
+      { "label": "Телефон", "value": "+7 (000) 000-00-00", "href": "tel:+70000000000" },
+      { "label": "Email", "value": "name@example.com", "href": "mailto:name@example.com" },
+      { "label": "Город", "value": "Москва" }
+    ]
+  },
+  "form": {
+    "telegram_username": "username",
+    "hint": "Нажмёшь «Отправить» — откроется Telegram с готовым текстом."
+  }
+}
